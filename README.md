@@ -1,168 +1,182 @@
+# Enhanced-SAIP-Benchmarking
+
 **An Interdisciplinary Framework for Evaluating On-Device AI Performance Using Information Systems Theory and Econometric Analysis**
 
 ---
 
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Python Version](https://img.shields.io/badge/python-3.9%2B-green.svg)]()
+
 ## 🌟 Overview
 
-This repository presents a comprehensive benchmarking framework that integrates **Information Systems Theory**, **Technology Acceptance Models (TAM)**, and **Econometric Analysis** to evaluate Small Large Language Models (sLLMs) on Neural Processing Units (NPUs). The framework extends traditional performance metrics with theoretical constructs from multiple disciplines.
+This repository provides a comprehensive benchmarking framework that integrates **Information Systems Theory (DeLone & McLean)**, **Technology Acceptance Models (TAM)**, and **Econometric Analysis** to evaluate small Large Language Models (sLLMs) running on Neural Processing Units (NPUs).
 
-**Key Features:**
-- Multi-dimensional performance evaluation (technical, economic, behavioral)
-- Integration of DeLone & McLean IS Success Model
-- Technology Acceptance Model (TAM) operationalization
-- Advanced econometric modeling (Production Functions, Technical Efficiency)
-- Machine Learning-based adaptive optimization (SAIP policy)
-- Comprehensive visualization and reporting
+It extends standard engineering benchmarks with behavioral and economic constructs to produce a multi-dimensional assessment of on-device AI performance.
+
+### Key Capabilities
+
+* Multi-dimensional performance evaluation (technical, economic, behavioral)
+* Translation of low-level metrics (latency, throughput) to IS Quality measures
+* Operationalized TAM (PU, PEOU, BI) for adoption modeling
+* Advanced econometric modeling (Cobb–Douglas, DEA, panel models)
+* SAIP adaptive policy for latency/efficiency optimization
+* Publication-ready visualizations and reproducible analysis notebooks
+
+---
+
+## 📁 Repository Layout
+
+```
+Enhanced-SAIP-Benchmarking/
+├── data/
+│   ├── comprehensive_analysis.json
+│   ├── comprehensive_results.xlsx
+│   ├── kpi_summary.csv
+│   └── raw_results.csv
+│
+├── models/
+│   ├── cost_function_summary.txt
+│   ├── panel_data_model_summary.txt
+│   └── production_function_summary.txt
+│
+├── visualizations/
+│   ├── is_quality_dashboard.png
+│   ├── performance_heatmap.png
+│   ├── policy_effectiveness.png
+│   ├── tam_analysis.png
+│   └── technical_efficiency.png
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+├── requirements.txt
+└── sLLM_MIS_논문반영.ipynb
+```
+
+---
 
 ## 📋 Quick Start
 
-### Installation
+### Clone & Install
 
 ```bash
-git clone [https://github.com/your-username/Enhanced-SAIP-Benchmarking.git](https://github.com/your-username/Enhanced-SAIP-Benchmarking.git)
+git clone https://github.com/your-username/Enhanced-SAIP-Benchmarking.git
 cd Enhanced-SAIP-Benchmarking
-
 pip install -r requirements.txt
-````
-
-### Basic Usage
-
-```python
-from src.enhanced_saip_analyzer import EnhancedSAIPAnalyzer
-
-# Initialize analyzer
-analyzer = EnhancedSAIPAnalyzer()
-
-# Run comprehensive analysis
-results = analyzer.run_complete_analysis(
-    main_data_path="data/sample_data_main.csv",
-    timeseries_data_path="data/sample_data_timeseries.csv"
-)
-
-# Generate publication-ready visualizations
-analyzer.generate_publication_figures()
 ```
 
-### Jupyter Notebook
+### Run the Main Analysis Notebook
 
-For interactive analysis, use the provided Jupyter notebook:
+All analyses, visualizations, and econometric modeling are orchestrated from the main Jupyter Notebook:
 
 ```bash
-jupyter notebook notebooks/SAIP_Benchmarking_Analysis.ipynb
+jupyter notebook sLLM_MIS_논문반영.ipynb
 ```
 
-## 🏗️ Theoretical Framework
+Run all cells sequentially to reproduce the entire pipeline. The notebook will automatically load the required datasets, run econometric and IS-theory-based analyses, and generate visualization outputs.
 
-### 1\. Information Systems Quality Model (DeLone & McLean)
+---
 
-  - **System Quality:** Performance, reliability, response time
-  - **Information Quality:** Accuracy, completeness, consistency
-  - **Service Quality:** Responsiveness, efficiency, user satisfaction
+## 🔧 Configuration & Inputs
 
-### 2\. Technology Acceptance Model (TAM)
+Configuration parameters (e.g., model selection, number of trials, policy settings) can be modified in the first section of the notebook.
 
-  - **Perceived Usefulness (PU):** Performance and efficiency metrics
-  - **Perceived Ease of Use (PEOU):** Resource efficiency and stability
-  - **Behavioral Intention (BI):** Adoption likelihood prediction
+### Default Configuration
 
-### 3\. Econometric Analysis
+* **Tasks:** NLU (SST-2), QA (SQuAD v2), Summarization (CNN/DailyMail)
+* **Trials:** 3 independent runs per task-model pair
+* **Models:** 9 sLLMs (DeepSeek, Llama, Gemma, OPT, Qwen2.5, EXAONE, Midm families)
+* **Prompt Mode:** Zero-shot
 
-  - **Production Functions:** Cobb-Douglas modeling of AI inference
-  - **Technical Efficiency:** Data Envelopment Analysis (DEA)
-  - **Cost Functions:** Economic relationship between inputs and outputs
+---
+
+## 🧠 Theoretical Framework
+
+### 1. Information Systems Quality Model (DeLone & McLean)
+
+* **System Quality:** Performance, reliability, response time
+* **Information Quality:** Accuracy, completeness, consistency
+* **Service Quality:** Responsiveness, efficiency, user satisfaction
+
+### 2. Technology Acceptance Model (TAM)
+
+* **Perceived Usefulness (PU):** Performance and efficiency metrics
+* **Perceived Ease of Use (PEOU):** Resource efficiency and stability
+* **Behavioral Intention (BI):** Adoption likelihood prediction
+
+### 3. Econometric Analysis
+
+* **Production Functions:** Cobb–Douglas modeling of AI inference
+* **Technical Efficiency:** Data Envelopment Analysis (DEA)
+* **Cost Functions:** Economic relationship between inputs and outputs
+
+---
 
 ## 📊 Key Results
 
 ### Hypothesis Testing Summary
 
-| Hypothesis | Research Area | Key Finding | Status |
-| :--- | :--- | :--- | :--- |
-| H1 | IS Success Model | Technical performance → Higher IS Quality | ✅ Supported |
-| H2 | TAM | Performance + Efficiency → Higher Adoption | ✅ Supported |
-| H3 | Econometrics | Diminishing returns to scale confirmed | ✅ Supported |
-| H4 | Adaptive Policy | SAIP reduces latency (30-45% gains) | ✅ Largely Supported |
+| Hypothesis | Research Area    | Key Finding                                | Status              |
+| :--------- | :--------------- | :----------------------------------------- | :------------------ |
+| H1         | IS Success Model | Technical performance → Higher IS Quality  | ✅ Supported         |
+| H2         | TAM              | Performance + Efficiency → Higher Adoption | ✅ Supported         |
+| H3         | Econometrics     | Diminishing returns to scale confirmed     | ✅ Supported         |
+| H4         | Adaptive Policy  | SAIP reduces latency (30–45% gains)        | ✅ Largely Supported |
 
 ### Model Performance Ranking
 
-1.  **Qwen2.5-0.5B-Instruct:** Best overall performance and efficiency
-2.  **EXAONE-3.5-2.4B-Instruct:** Strong balance of performance and features
-3.  **Gemma-2B-IT:** Competitive mid-range performer
+1. **Qwen2.5-0.5B-Instruct:** Best overall performance and efficiency
+2. **EXAONE-3.5-2.4B-Instruct:** Strong balance of performance and features
+3. **Gemma-2B-IT:** Competitive mid-range performer
 
-## 🎯 Research Questions Addressed
-
-### RQ1: Technical → IS Quality Translation
-
-Our framework successfully translates low-level technical metrics (latency, throughput) into holistic IS quality measures using the D\&M model.
-
-### RQ2: Performance → User Adoption
-
-TAM analysis reveals that both performance (PU) and efficiency (PEOU) are critical for adoption intention.
-
-### RQ3: Economic Production Relationships
-
-Econometric models confirm diminishing marginal returns to scale in sLLM inference.
-
-### RQ4: Adaptive Policy Effectiveness
-
-SAIP policy demonstrates significant latency reductions (30-45%) across most model configurations.
-
-## 📁 Dataset Description
-
-### Model Specifications
-
-9 sLLMs ranging from 0.5B to 3.2B parameters, including:
-
-  - DeepSeek, Llama, Gemma, OPT, Qwen2.5, EXAONE, Midm families
-
-### Task Categories
-
-  - **NLU:** Sentiment classification (SST-2)
-  - **QA:** Extractive question answering (SQuAD v2)
-  - **Summarization:** Abstractive summarization (CNN/DailyMail)
-
-### Evaluation Protocol
-
-  - 100 samples per task, 3 independent trials
-  - Zero-shot prompting strategy
-  - N=300 observations per model-task combination
-
-## 🔧 Configuration
-
-Modify `config/analysis_config.yaml` to customize:
-
-```yaml
-analysis:
-  models: ["Qwen2.5-0.5B", "Llama-3.2-3B", "Gemma-2B"]
-  tasks: ["NLU", "QA", "Summarization"]
-  metrics: ["latency", "throughput", "energy", "accuracy"]
-  
-econometric:
-  production_function: "cobb_douglas"
-  efficiency_method: "dea"
-  confidence_level: 0.95
-```
+---
 
 ## 📈 Outputs
 
-The framework generates:
+### Data Directory (`data/`)
 
-  - Comprehensive Results (Excel, CSV, JSON)
-  - Publication-Ready Visualizations (PNG, PDF)
-  - Econometric Model Summaries
-  - Statistical Validation Reports
-  - Interactive Dashboards
+* `raw_results.csv`: Raw benchmark data
+* `kpi_summary.csv`: Aggregated KPIs
+* `comprehensive_results.xlsx`: Processed econometric outputs
+* `comprehensive_analysis.json`: Detailed JSON summary
 
+### Models Directory (`models/`)
 
-## 🤝 Contributing
+* `cost_function_summary.txt`: Cost function estimations
+* `production_function_summary.txt`: Cobb–Douglas production results
+* `panel_data_model_summary.txt`: Panel data regression outputs
 
-We welcome contributions\! Please see our Contributing Guidelines and read our Code of Conduct.
+### Visualizations Directory (`visualizations/`)
+
+* `is_quality_dashboard.png`: DeLone & McLean IS success visualization
+* `performance_heatmap.png`: Latency and throughput distribution
+* `policy_effectiveness.png`: SAIP policy before/after effects
+* `tam_analysis.png`: PU–PEOU–BI relationships
+* `technical_efficiency.png`: DEA efficiency frontier
+
+---
+
+## ✅ Summary of Findings
+
+* **Technical → IS Quality:** Higher stability and throughput lead to greater IS Quality scores.
+* **Performance → Adoption (TAM):** PU and PEOU strongly predict adoption intent.
+* **Econometrics:** Confirmed diminishing returns to scale for sLLM inference.
+* **Adaptive Policy (SAIP):** Reduced latency by ~30–45% without accuracy loss.
+
+---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the `LICENSE` file for details.
+This project is licensed under the **MIT License** — see the `LICENSE` file for details.
+
+---
 
 ## 🙏 Acknowledgments
 
-  - Rebellions Inc. for NPU access and support
-  - The open-source AI community for model architectures
-  - Contributors and beta testers
+* Rebellions Inc. for NPU access and infrastructure support
+* Open-source AI community for model architectures
+* Beta testers and contributors
+
+
+
+<!-- EOF -->

@@ -1,0 +1,25 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               log_cost   R-squared:                       0.307
+Model:                            OLS   Adj. R-squared:                  0.307
+Method:                 Least Squares   F-statistic:                     2395.
+Date:                Fri, 07 Nov 2025   Prob (F-statistic):               0.00
+Time:                        13:03:55   Log-Likelihood:                -3447.9
+No. Observations:                5400   AIC:                             6900.
+Df Residuals:                    5398   BIC:                             6913.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -8.5622      0.095    -90.348      0.000      -8.748      -8.376
+log_output    -0.6530      0.013    -48.939      0.000      -0.679      -0.627
+==============================================================================
+Omnibus:                      187.546   Durbin-Watson:                   0.049
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              193.401
+Skew:                          -0.438   Prob(JB):                     1.01e-42
+Kurtosis:                       2.695   Cond. No.                         110.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

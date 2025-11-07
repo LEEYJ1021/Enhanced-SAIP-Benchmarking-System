@@ -1,0 +1,37 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             latency_ms   R-squared:                       0.491
+Model:                            OLS   Adj. R-squared:                  0.490
+Method:                 Least Squares   F-statistic:                     519.1
+Date:                Fri, 07 Nov 2025   Prob (F-statistic):               0.00
+Time:                        13:03:55   Log-Likelihood:                -40542.
+No. Observations:                5400   AIC:                         8.111e+04
+Df Residuals:                    5389   BIC:                         8.118e+04
+Df Model:                          10                                         
+Covariance Type:            nonrobust                                         
+=======================================================================================================
+                                          coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------
+const                                1.454e+15   1.49e+15      0.979      0.328   -1.46e+15    4.37e+15
+parameters_b                        -5.386e+14    5.5e+14     -0.979      0.328   -1.62e+15     5.4e+14
+model_DeepSeek-R1-Distill-Qwen-1.5B -6.464e+14    6.6e+14     -0.979      0.328   -1.94e+15    6.48e+14
+model_EXAONE-3.5-2.4B-Instruct      -1.616e+14   1.65e+14     -0.979      0.328   -4.85e+14    1.62e+14
+model_Llama-3.2-3B-Instruct          2.693e+14   2.75e+14      0.979      0.328    -2.7e+14    8.09e+14
+model_Midm-2.0-Mini-Instruct         -3.77e+14   3.85e+14     -0.979      0.328   -1.13e+15    3.78e+14
+model_Qwen2.5-0.5B-Instruct         -1.185e+15   1.21e+15     -0.979      0.328   -3.56e+15    1.19e+15
+model_Qwen2.5-1.5B-Instruct         -6.464e+14    6.6e+14     -0.979      0.328   -1.94e+15    6.48e+14
+model_Qwen2.5-3B-Instruct            1.616e+14   1.65e+14      0.979      0.328   -1.62e+14    4.85e+14
+model_gemma-2b-it                    -3.77e+14   3.85e+14     -0.979      0.328   -1.13e+15    3.78e+14
+task_NLU                             -447.5833     14.715    -30.417      0.000    -476.430    -418.736
+task_QA                              -404.0374     14.711    -27.465      0.000    -432.877    -375.198
+==============================================================================
+Omnibus:                      212.626   Durbin-Watson:                   0.254
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              198.798
+Skew:                          -0.419   Prob(JB):                     6.78e-44
+Kurtosis:                       2.575   Cond. No.                     9.52e+14
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 3.69e-26. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.

@@ -294,25 +294,6 @@ optimized_models = policy_engine.optimize_portfolio(model_data)
 
 ---
 
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](docs/CONTRIBUTING.md) for details.
-
-### Development Setup
-
-```bash
-# Install development dependencies
-pip install -r requirements-dev.txt
-
-# Run test suite
-pytest tests/ -v
-
-# Build documentation
-cd docs && make html
-```
-
----
-
 ## 📜 License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
